@@ -357,7 +357,6 @@ module TweetStream
         :method => method.to_s.upcase,
         :user_agent => user_agent,
         :on_inited => inited_proc,
-        :filters => params.delete(:track),
         :params => params,
         :oauth => auth_params
       }.merge(extra_stream_parameters)
@@ -476,8 +475,8 @@ module TweetStream
       {
         :consumer_key => consumer_key,
         :consumer_secret => consumer_secret,
-        :access_key => oauth_token,
-        :access_secret => oauth_token_secret
+        :token => oauth_token,
+        :token_secret => oauth_token_secret
       }
     end
 
