@@ -25,6 +25,7 @@ module TweetStream
     # @private
     attr_accessor *Configuration::VALID_OPTIONS_KEYS
     attr_accessor :timer
+    attr_reader :stream
 
     # Creates a new API
     def initialize(options={})
